@@ -5,27 +5,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#101f24">
-<meta name="description" content="THE AECF,LLC — Company information, privacy and contact information.">
-<meta name="robots" content="noindex">
-<title>THE AECF,LLC | Corporate Website</title>
+<meta name="description" content="THE AECF,LLC is a mobile application development company focused on innovative digital products, mobile games, entertainment, education, productivity, utilities and engaging software experiences.">
+
+<title>THE AECF,LLC | Mobile Application Development</title>
+
+<link rel="canonical" href="https://theaecfllc.online/">
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101f24'/%3E%3Cpath d='M32 10L54 52H43L32 29L21 52H10Z' fill='%23D7B98E'/%3E%3C/svg%3E">
 
 <style>
+
 :root {
   --forest: #101f24;
-  --dark: #0a1519;
+  --dark: #091519;
   --emerald: #127c70;
+  --emerald-dark: #09675d;
   --mint: #8ed8c2;
   --gold: #d7b98e;
   --ivory: #f7f6f2;
   --white: #ffffff;
   --ink: #172b30;
-  --muted: #607477;
+  --muted: #596d70;
   --light-muted: #b5c7c7;
   --border: rgba(17,55,56,.13);
   --dark-border: rgba(255,255,255,.13);
-  --radius: 24px;
 }
 
 * {
@@ -41,11 +44,11 @@ html {
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--ivory);
   color: var(--ink);
+  background: var(--ivory);
   line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -59,22 +62,26 @@ button {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--emerald);
+  outline: 3px solid var(--mint);
   outline-offset: 5px;
 }
 
 .container {
-  width: min(1200px, 90%);
+  width: min(1240px, 90%);
   margin: auto;
+}
+
+section {
+  padding: 95px 0;
 }
 
 .skip-link {
   position: fixed;
   top: -100px;
   left: 15px;
-  padding: 12px 22px;
   background: var(--gold);
   color: var(--dark);
+  padding: 12px 24px;
   z-index: 1000;
 }
 
@@ -87,16 +94,16 @@ header {
   top: 0;
   z-index: 100;
   background: rgba(16,31,36,.97);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--dark-border);
-  color: var(--white);
+  color: white;
 }
 
 .navbar {
   min-height: 88px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
 }
 
@@ -107,45 +114,46 @@ header {
 }
 
 .brand-mark {
-  width: 49px;
-  height: 49px;
+  flex-shrink: 0;
   display: grid;
   place-items: center;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(145deg,#f0d5aa,#b69a70);
+  color: var(--forest);
   border-radius: 13px;
-  flex-shrink: 0;
+  box-shadow: 0 8px 30px rgba(215,185,142,.12);
 }
 
 .brand-mark svg {
-  width: 31px;
-  height: 31px;
-  color: var(--forest);
+  width: 32px;
+  height: 32px;
 }
 
 .brand-name {
   font-size: 20px;
+  letter-spacing: 1.2px;
   font-weight: 750;
-  letter-spacing: 1.3px;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .brand-subtitle {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2.3px;
   color: var(--light-muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 27px;
 }
 
 .navigation a {
-  color: var(--light-muted);
   font-size: 14px;
   font-weight: 600;
+  color: var(--light-muted);
   transition: color .2s;
 }
 
@@ -153,19 +161,24 @@ header {
   color: var(--gold);
 }
 
-.navigation .contact-link {
-  padding: 12px 24px;
-  border: 1px solid rgba(215,185,142,.6);
+.navigation .nav-contact {
+  padding: 12px 23px;
   color: var(--gold);
-  border-radius: 10px;
+  border: 1px solid rgba(215,185,142,.5);
+  border-radius: 11px;
+}
+
+.navigation .nav-contact:hover {
+  background: rgba(215,185,142,.08);
 }
 
 .menu-button {
   display: none;
+  place-items: center;
   width: 45px;
   height: 45px;
-  border: 1px solid var(--dark-border);
   border-radius: 10px;
+  border: 1px solid var(--dark-border);
   color: white;
   background: transparent;
   cursor: pointer;
@@ -174,11 +187,12 @@ header {
 .hero {
   position: relative;
   isolation: isolate;
-  background:
-    radial-gradient(ellipse at 80% 40%,rgba(18,124,112,.30),transparent 55%),
-    linear-gradient(125deg,#101f24,#0a171b);
-  color: var(--white);
+  padding: 0;
   overflow: hidden;
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at 80% 45%,rgba(18,124,112,.32),transparent 55%),
+    linear-gradient(135deg,#101f24,#091619);
 }
 
 .hero::before {
@@ -187,35 +201,35 @@ header {
   inset: 0;
   z-index: -1;
   background-image:
-    linear-gradient(rgba(142,216,194,.04) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(142,216,194,.04) 1px,transparent 1px);
+    linear-gradient(rgba(142,216,194,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(142,216,194,.045) 1px,transparent 1px);
   background-size: 65px 65px;
   mask-image: linear-gradient(to bottom,black,transparent);
 }
 
 .hero-grid {
-  min-height: 650px;
-  padding: 90px 0;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1.15fr 1fr;
   align-items: center;
   gap: 45px;
+  min-height: 670px;
+  padding: 75px 0;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
+  color: var(--emerald);
   font-size: 11px;
   font-weight: 750;
-  letter-spacing: 2.4px;
   text-transform: uppercase;
-  color: var(--emerald);
+  letter-spacing: 2.4px;
 }
 
 .eyebrow::before {
   content: "";
-  width: 26px;
+  width: 27px;
   height: 1px;
   background: currentColor;
 }
@@ -226,23 +240,24 @@ header {
 }
 
 .hero h1 {
-  margin: 22px 0 28px;
-  font-size: clamp(45px,6vw,83px);
-  font-weight: 720;
-  letter-spacing: -3px;
-  line-height: 1.08;
+  font-size: clamp(43px,5.4vw,77px);
+  font-weight: 730;
+  line-height: 1.12;
+  letter-spacing: -2.8px;
+  margin: 23px 0;
 }
 
 .hero h1 span {
   display: block;
-  background: linear-gradient(100deg,#b9e7d9,#70c7b0);
-  -webkit-background-clip: text;
+  color: var(--mint);
+  background: linear-gradient(100deg,#c4eddf,#65bea6);
   background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-description {
-  max-width: 540px;
+  max-width: 580px;
   color: var(--light-muted);
   font-size: 18px;
 }
@@ -251,18 +266,18 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .btn {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  gap: 12px;
-  border-radius: 11px;
-  padding: 15px 26px;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 25px;
   font-size: 14px;
   font-weight: 700;
+  border-radius: 11px;
   transition: transform .25s,background .25s;
 }
 
@@ -271,29 +286,34 @@ header {
 }
 
 .btn-gold {
-  background: linear-gradient(135deg,#f0d7af,#c5a375);
   color: var(--dark);
+  background: linear-gradient(135deg,#f0d7af,#c5a375);
+  box-shadow: 0 10px 30px rgba(215,185,142,.1);
 }
 
 .btn-outline {
-  border: 1px solid var(--dark-border);
-  background: rgba(255,255,255,.04);
-  color: var(--white);
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.035);
+  color: white;
 }
 
 .btn-outline:hover {
-  background: rgba(142,216,194,.1);
+  background: rgba(142,216,194,.08);
 }
 
 .btn-emerald {
-  background: var(--emerald);
+  background: var(--emerald-dark);
   color: white;
+}
+
+.btn-emerald:hover {
+  background: var(--forest);
 }
 
 .hero-art {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 570px;
   margin: auto;
 }
 
@@ -303,63 +323,54 @@ header {
   height: auto;
 }
 
-.art-float {
-  animation: float 7s ease-in-out infinite;
+.float-device {
+  animation: floatDevice 7s ease-in-out infinite;
+}
+
+.float-card {
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+.float-card-delayed {
+  animation: floatCard 6s 1s ease-in-out infinite;
 }
 
 .orbit {
-  transform-origin: 250px 250px;
-  animation: orbit 65s linear infinite;
+  transform-origin: 280px 260px;
+  animation: spin 70s linear infinite;
 }
 
-@keyframes float {
+@keyframes floatDevice {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-13px); }
+  50% { transform: translateY(-11px); }
 }
 
-@keyframes orbit {
+@keyframes floatCard {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(9px); }
+}
+
+@keyframes spin {
   to { transform: rotate(360deg); }
 }
 
-.art-label {
-  position: absolute;
-  bottom: 12px;
-  left: 0;
-  padding: 18px 23px;
-  background: rgba(16,31,36,.92);
-  border: 1px solid var(--dark-border);
-  border-radius: 14px;
-  box-shadow: 0 15px 45px rgba(0,0,0,.2);
-}
-
-.art-label strong {
-  display: block;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.art-label small {
-  color: var(--light-muted);
-  font-size: 11px;
-}
-
 .identity-strip {
-  background: #fff;
+  background: white;
   border-bottom: 1px solid var(--border);
 }
 
 .identity-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  padding: 28px 0;
+  padding: 27px 0;
 }
 
 .identity-item {
-  padding: 5px 15px;
   text-align: center;
+  padding: 6px 15px;
+  color: var(--muted);
   font-weight: 650;
   font-size: 13px;
-  color: var(--muted);
 }
 
 .identity-item:not(:last-child) {
@@ -367,22 +378,14 @@ header {
 }
 
 .identity-item span {
+  margin-right: 8px;
   color: var(--emerald);
-  margin-right: 9px;
-}
-
-section {
-  padding: 100px 0;
-}
-
-.hero {
-  padding: 0;
 }
 
 .section-heading {
-  max-width: 720px;
+  max-width: 740px;
   text-align: center;
-  margin: 0 auto 48px;
+  margin: 0 auto 45px;
 }
 
 .section-heading h2,
@@ -403,20 +406,20 @@ section {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 75px;
   align-items: center;
+  gap: 75px;
 }
 
 .about-art {
-  min-height: 365px;
-  display: grid;
-  place-items: center;
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 380px;
   border-radius: 30px;
   background:
-    radial-gradient(circle at 50% 40%,rgba(18,124,112,.35),transparent 65%),
+    radial-gradient(circle at 50% 45%,rgba(18,124,112,.38),transparent 65%),
     var(--forest);
 }
 
@@ -425,9 +428,9 @@ section {
   content: "";
   position: absolute;
   z-index: -1;
-  width: 275px;
-  height: 275px;
-  border: 1px solid rgba(142,216,194,.25);
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(142,216,194,.24);
   border-radius: 40px;
   transform: rotate(45deg);
 }
@@ -445,126 +448,230 @@ section {
 .monogram strong {
   display: block;
   font-size: clamp(55px,8vw,100px);
+  line-height: 1.2;
   letter-spacing: -5px;
-  line-height: 1.1;
 }
 
 .monogram small {
   display: block;
-  margin-top: 18px;
-  letter-spacing: 3px;
   color: var(--light-muted);
+  letter-spacing: 2px;
   font-size: 11px;
+  margin-top: 10px;
 }
 
 .about-content p + p {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
-.cards-section {
+.about-points {
+  display: grid;
+  gap: 12px;
+  margin-top: 23px;
+}
+
+.about-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.check-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  background: #dfede5;
+  color: var(--emerald-dark);
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.categories-section {
   background: #eeefea;
   border-block: 1px solid var(--border);
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 23px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
 }
 
 .feature-card {
-  background: var(--white);
+  position: relative;
+  overflow: hidden;
+  background: white;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px;
+  padding: 28px;
+  border-radius: 22px;
   box-shadow: 0 10px 30px rgba(16,31,36,.035);
-  transition: transform .25s,box-shadow .25s;
+  transition: transform .25s,box-shadow .25s,border-color .25s;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,var(--emerald),var(--gold));
+  opacity: 0;
+  transition: opacity .25s;
 }
 
 .feature-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(16,31,36,.08);
+  border-color: rgba(18,124,112,.35);
+  box-shadow: 0 20px 40px rgba(16,31,36,.07);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 .feature-icon {
+  width: 55px;
+  height: 55px;
   display: grid;
   place-items: center;
-  width: 56px;
-  height: 56px;
-  margin-bottom: 24px;
-  border-radius: 15px;
-  color: var(--emerald);
   background: #e5f2ed;
+  color: var(--emerald-dark);
+  border: 1px solid rgba(18,124,112,.08);
+  border-radius: 14px;
+  margin-bottom: 20px;
 }
 
 .feature-icon svg {
   width: 27px;
   height: 27px;
-  fill: none;
   stroke: currentColor;
+  fill: none;
   stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .feature-card h3 {
-  font-size: 21px;
-  margin-bottom: 12px;
+  font-size: 19px;
+  line-height: 1.35;
+  margin-bottom: 11px;
 }
 
 .feature-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.category-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+.dark-section {
+  color: white;
+  background:
+    radial-gradient(ellipse at 80% 0%,rgba(18,124,112,.23),transparent 65%),
+    var(--forest);
+}
+
+.dark-section .section-heading p {
+  color: var(--light-muted);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.process-card {
+  padding: 27px;
+  border: 1px solid var(--dark-border);
+  background: rgba(255,255,255,.035);
+  border-radius: 19px;
+}
+
+.process-number {
+  font-size: 29px;
+  color: var(--gold);
+  font-weight: 650;
+  margin-bottom: 17px;
+}
+
+.process-card h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.process-card p {
+  font-size: 14px;
+  color: var(--light-muted);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.value-card {
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 23px;
+  padding: 30px;
+}
+
+.value-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.value-card p {
   color: var(--muted);
   font-size: 14px;
 }
 
-.card-link {
-  display: inline-flex;
-  margin-top: 22px;
-  color: var(--emerald);
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.card-link:hover {
-  text-decoration: underline;
+.privacy-section {
+  padding-top: 0;
 }
 
 .privacy-panel {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 40px;
+  gap: 35px;
   padding: 45px;
-  border-radius: 28px;
   background: #e5f0eb;
-  border: 1px solid rgba(18,124,112,.15);
+  border: 1px solid rgba(18,124,112,.17);
+  border-radius: 28px;
 }
 
 .privacy-panel h2 {
-  font-size: clamp(30px,4vw,42px);
-  margin: 12px 0;
-  line-height: 1.2;
+  font-size: clamp(28px,4vw,42px);
   letter-spacing: -1px;
+  line-height: 1.25;
+  margin: 12px 0;
 }
 
 .privacy-panel p {
+  max-width: 680px;
   color: var(--muted);
-  max-width: 650px;
   font-size: 15px;
-}
-
-.dark-section {
-  background:
-    radial-gradient(ellipse at 80% 0%,rgba(18,124,112,.2),transparent 70%),
-    var(--forest);
-  color: var(--white);
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 70px;
   align-items: center;
+  gap: 65px;
 }
 
 .contact-content p {
@@ -573,16 +680,16 @@ section {
 }
 
 .contact-card {
-  padding: 30px;
-  border: 1px solid var(--dark-border);
-  border-radius: var(--radius);
   background: rgba(255,255,255,.035);
+  border: 1px solid var(--dark-border);
+  border-radius: 24px;
+  padding: 30px;
 }
 
 .contact-row {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 15px;
   padding: 19px 0;
 }
 
@@ -602,11 +709,11 @@ section {
   flex-shrink: 0;
   display: grid;
   place-items: center;
-  width: 43px;
-  height: 43px;
-  border-radius: 11px;
-  background: rgba(215,185,142,.09);
+  width: 44px;
+  height: 44px;
   color: var(--gold);
+  background: rgba(215,185,142,.09);
+  border-radius: 11px;
   font-size: 19px;
 }
 
@@ -620,11 +727,19 @@ section {
   overflow-wrap: anywhere;
 }
 
+.contact-row a {
+  color: var(--mint);
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
 footer {
+  color: white;
   background: var(--dark);
-  color: var(--white);
-  padding: 55px 0 25px;
   border-top: 1px solid var(--dark-border);
+  padding: 55px 0 25px;
 }
 
 .footer-grid {
@@ -635,7 +750,7 @@ footer {
 }
 
 .footer-description {
-  max-width: 340px;
+  max-width: 350px;
   color: var(--light-muted);
   font-size: 13px;
   margin-top: 20px;
@@ -643,14 +758,15 @@ footer {
 
 .footer-column h3 {
   font-size: 14px;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 
 .footer-column a {
   display: block;
-  font-size: 13px;
   color: var(--light-muted);
+  font-size: 13px;
   margin: 11px 0;
+  overflow-wrap: anywhere;
 }
 
 .footer-column a:hover {
@@ -662,8 +778,8 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 15px;
-  border-top: 1px solid var(--dark-border);
   padding-top: 24px;
+  border-top: 1px solid var(--dark-border);
   color: var(--light-muted);
   font-size: 12px;
 }
@@ -672,17 +788,13 @@ footer {
   color: var(--gold);
 }
 
-.preview-notice {
-  padding: 12px 5%;
-  background: #f1e9d9;
-  color: #54452e;
-  font-size: 12px;
-  text-align: center;
-}
+@media(max-width:1100px) {
+  .card-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
 
-@media(max-width: 950px) {
   .navigation {
-    gap: 18px;
+    gap: 17px;
   }
 
   .about-grid,
@@ -690,12 +802,16 @@ footer {
     gap: 35px;
   }
 
-  .feature-card {
-    padding: 25px;
+  .process-grid {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media(max-width: 760px) {
+@media(max-width:760px) {
+  html {
+    scroll-padding-top: 95px;
+  }
+
   .navbar {
     min-height: 76px;
   }
@@ -704,9 +820,12 @@ footer {
     font-size: 17px;
   }
 
+  .brand-subtitle {
+    font-size: 9px;
+  }
+
   .menu-button {
     display: grid;
-    place-items: center;
   }
 
   .navigation {
@@ -715,31 +834,31 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    padding: 25px 5%;
+    background: var(--forest);
     flex-direction: column;
     align-items: stretch;
-    background: var(--forest);
+    gap: 20px;
+    padding: 25px 5%;
     border-bottom: 1px solid var(--dark-border);
-    gap: 21px;
   }
 
   .navigation.open {
     display: flex;
   }
 
-  .navigation .contact-link {
+  .navigation .nav-contact {
     text-align: center;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
+    padding: 60px 0;
     min-height: auto;
-    padding: 65px 0;
     gap: 30px;
   }
 
   .hero h1 {
-    letter-spacing: -2px;
+    letter-spacing: -1.7px;
   }
 
   .hero-description {
@@ -747,21 +866,25 @@ footer {
   }
 
   .hero-art {
-    max-width: 380px;
+    max-width: 420px;
   }
 
   section {
     padding: 65px 0;
   }
 
+  .hero {
+    padding: 0;
+  }
+
   .about-grid,
-  .card-grid,
-  .contact-grid {
+  .contact-grid,
+  .values-grid {
     grid-template-columns: 1fr;
   }
 
   .about-art {
-    min-height: 280px;
+    min-height: 290px;
   }
 
   .identity-item {
@@ -774,10 +897,30 @@ footer {
     margin: 0 0 5px;
   }
 
+  .card-grid {
+    gap: 13px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+
+  .process-card {
+    padding: 20px;
+  }
+
   .privacy-panel {
-    padding: 28px;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 22px;
+    padding: 27px;
   }
 
   .privacy-panel .btn {
@@ -786,7 +929,7 @@ footer {
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 27px;
   }
 
   .footer-company {
@@ -794,7 +937,12 @@ footer {
   }
 }
 
-@media(max-width: 380px) {
+@media(max-width:420px) {
+  .card-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
   .brand-name {
     font-size: 15px;
   }
@@ -808,16 +956,17 @@ footer {
   }
 }
 
-@media(prefers-reduced-motion: reduce) {
+@media(prefers-reduced-motion:reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  *, *::before, *::after {
+  *,*::before,*::after {
     animation: none !important;
     transition: none !important;
   }
 }
+
 </style>
 </head>
 
@@ -828,28 +977,37 @@ footer {
 <header>
   <div class="container navbar">
 
-    <a class="brand" href="#top" aria-label="THE AECF,LLC homepage">
+    <a class="brand" href="#top"
+       aria-label="THE AECF,LLC homepage">
+
       <div class="brand-mark">
         <svg viewBox="0 0 40 40" aria-hidden="true">
           <path d="M20 3L38 36H29L20 18L11 36H2Z"
             fill="currentColor"/>
-          <path d="M14 29H26L20 23Z" fill="currentColor"/>
+          <path d="M14 29H26L20 23Z"
+            fill="currentColor"/>
         </svg>
       </div>
 
       <div>
         <div class="brand-name">THE AECF,LLC</div>
-        <div class="brand-subtitle">Corporate Information</div>
+        <div class="brand-subtitle">Digital Innovation</div>
       </div>
+
     </a>
 
-    <button class="menu-button" id="menuButton"
+    <button class="menu-button"
+      id="menuButton"
+      type="button"
       aria-label="Toggle navigation"
       aria-expanded="false"
       aria-controls="navigation">
 
-      <svg width="24" height="24" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2"
+      <svg width="24" height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
         aria-hidden="true">
         <path d="M3 6h18M3 12h18M3 18h18"/>
       </svg>
@@ -861,19 +1019,15 @@ footer {
 
       <a href="#top">Home</a>
       <a href="#about">About Us</a>
-      <a href="#information">Information</a>
+      <a href="#information">Applications</a>
+      <a href="#development">Development</a>
       <a href="privacy-policy.html">Privacy</a>
-      <a href="#contact" class="contact-link">Contact Us</a>
+      <a href="#contact" class="nav-contact">Contact Us</a>
 
     </nav>
 
   </div>
 </header>
-
-<div class="preview-notice">
-  Website preview — company information and contact details
-  are being prepared for final review.
-</div>
 
 <main id="main">
 
@@ -881,122 +1035,260 @@ footer {
   <div class="container hero-grid">
 
     <div>
-      <span class="eyebrow">Corporate Information</span>
+
+      <span class="eyebrow">
+        Technology. Creativity. Innovation.
+      </span>
 
       <h1>
-        THE AECF,
-        <span>LLC.</span>
+        Building innovative
+        <span>applications.</span>
       </h1>
 
       <p class="hero-description">
-        Welcome to the corporate information website for
-        THE AECF,LLC. Explore company information,
-        privacy resources and contact details as they
-        become available.
+        THE AECF,LLC is a mobile application development
+        company focused on creating intuitive, engaging
+        and reliable digital experiences across a diverse
+        range of application categories.
       </p>
 
       <div class="actions">
-        <a href="#about" class="btn btn-gold">
-          About Our Company <span aria-hidden="true">→</span>
+
+        <a href="#information" class="btn btn-gold">
+          Explore Our Development Focus
+          <span aria-hidden="true">→</span>
         </a>
 
-        <a href="#information" class="btn btn-outline">
-          Explore Information
+        <a href="#about" class="btn btn-outline">
+          About Our Company
         </a>
+
       </div>
+
     </div>
 
     <div class="hero-art">
 
-      <svg viewBox="0 0 500 500" role="img"
-        aria-label="Decorative emerald and gold geometric sculpture">
+      <svg viewBox="0 0 560 520"
+        role="img"
+        aria-label="Decorative smartphone and digital application graphics">
 
         <defs>
-          <radialGradient id="artGlow">
-            <stop offset="0%" stop-color="#50bb9e" stop-opacity=".25"/>
-            <stop offset="100%" stop-color="#50bb9e" stop-opacity="0"/>
+
+          <radialGradient id="glow">
+            <stop offset="0%" stop-color="#59c5a8"
+              stop-opacity=".3"/>
+            <stop offset="100%" stop-color="#59c5a8"
+              stop-opacity="0"/>
           </radialGradient>
 
-          <linearGradient id="faceA" x1="0" y1="0" x2="1" y2="1">
-            <stop stop-color="#b8e1d3"/>
-            <stop offset="100%" stop-color="#438e80"/>
+          <linearGradient id="phoneBody"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#456d68"/>
+            <stop offset="100%" stop-color="#13292c"/>
           </linearGradient>
 
-          <linearGradient id="faceB" x1="0" y1="0" x2="1" y2="1">
-            <stop stop-color="#438e80"/>
-            <stop offset="100%" stop-color="#143d3a"/>
+          <linearGradient id="phoneScreen"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#183e3d"/>
+            <stop offset="100%" stop-color="#0b1a20"/>
           </linearGradient>
 
-          <linearGradient id="faceC" x1="0" y1="0" x2="1" y2="1">
-            <stop stop-color="#34796c"/>
-            <stop offset="100%" stop-color="#10282b"/>
+          <linearGradient id="emeraldTile"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#65bca6"/>
+            <stop offset="100%" stop-color="#147c70"/>
           </linearGradient>
 
-          <linearGradient id="goldFace">
-            <stop stop-color="#f0d5aa"/>
-            <stop offset="100%" stop-color="#b18f5d"/>
+          <linearGradient id="goldTile"
+            x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#f1d6ad"/>
+            <stop offset="100%" stop-color="#b19367"/>
           </linearGradient>
 
-          <filter id="artShadow" x="-50%" y="-50%"
+          <filter id="shadow" x="-50%" y="-50%"
             width="200%" height="200%">
-            <feDropShadow dx="0" dy="20" stdDeviation="18"
-              flood-color="#000" flood-opacity=".3"/>
+            <feDropShadow dx="0" dy="18"
+              stdDeviation="16"
+              flood-color="#000"
+              flood-opacity=".3"/>
           </filter>
+
         </defs>
 
-        <circle cx="250" cy="250" r="240" fill="url(#artGlow)"/>
+        <circle cx="280" cy="260" r="245" fill="url(#glow)"/>
 
         <g fill="none" stroke="#8ed8c2">
-          <circle cx="250" cy="250" r="210" opacity=".15"/>
-          <circle cx="250" cy="250" r="180" opacity=".18"/>
-          <circle cx="250" cy="250" r="145" opacity=".2"/>
-          <circle class="orbit" cx="250" cy="250" r="195"
-            stroke-dasharray="3 13" opacity=".4"/>
-          <ellipse cx="250" cy="250" rx="218" ry="85"
-            transform="rotate(-35 250 250)" opacity=".2"/>
+
+          <circle cx="280" cy="260" r="228" opacity=".12"/>
+          <circle cx="280" cy="260" r="195" opacity=".16"/>
+          <circle cx="280" cy="260" r="160" opacity=".18"/>
+
+          <circle class="orbit"
+            cx="280" cy="260" r="212"
+            stroke-dasharray="3 12" opacity=".35"/>
+
+          <ellipse cx="280" cy="260"
+            rx="246" ry="88"
+            transform="rotate(-34 280 260)"
+            opacity=".15"/>
+
+        </g>
+
+        <g class="float-device" filter="url(#shadow)">
+
+          <rect x="170" y="42"
+            width="220" height="430"
+            rx="37"
+            fill="url(#phoneBody)"
+            stroke="#8ed8c2"
+            stroke-width="1.5"/>
+
+          <rect x="181" y="53"
+            width="198" height="408"
+            rx="29"
+            fill="url(#phoneScreen)"/>
+
+          <rect x="242" y="65"
+            width="76" height="15"
+            rx="8"
+            fill="#091519"/>
+
+          <text x="203" y="111"
+            font-size="10"
+            letter-spacing="2"
+            fill="#d7b98e">THE AECF,LLC</text>
+
+          <text x="203" y="139"
+            font-size="19"
+            font-weight="bold"
+            fill="#ffffff">Digital experiences</text>
+
+          <rect x="203" y="155"
+            width="154" height="88"
+            rx="13"
+            fill="url(#emeraldTile)"/>
+
+          <path d="M280 171L315 230H296L280 198L264 230H245Z"
+            fill="#e4f3ed"/>
+
+          <path d="M270 220H290L280 211Z"
+            fill="#d7b98e"/>
+
+          <rect x="203" y="260"
+            width="70" height="62"
+            rx="12" fill="#326f65"/>
+
+          <g stroke="#c4eddf" fill="none" stroke-width="2">
+            <rect x="222" y="276" width="32" height="24" rx="7"/>
+            <path d="M232 283v10M227 288h10"/>
+            <circle cx="246" cy="284" r="1.5" fill="#c4eddf"/>
+            <circle cx="250" cy="292" r="1.5" fill="#c4eddf"/>
+          </g>
+
+          <rect x="287" y="260"
+            width="70" height="62"
+            rx="12" fill="url(#goldTile)"/>
+
+          <g fill="none" stroke="#173b37" stroke-width="2">
+            <rect x="307" y="274" width="30" height="30" rx="7"/>
+            <path d="M316 282h12M316 290h12M316 298h7"/>
+          </g>
+
+          <rect x="203" y="336"
+            width="70" height="62"
+            rx="12" fill="#214b56"/>
+
+          <g fill="none" stroke="#b4e1d5" stroke-width="2">
+            <circle cx="238" cy="367" r="15"/>
+            <path d="M228 370l7-9 6 5 7-11"/>
+          </g>
+
+          <rect x="287" y="336"
+            width="70" height="62"
+            rx="12" fill="#3f6660"/>
+
+          <path d="M316 356L336 367L316 378Z"
+            fill="#d7b98e"/>
+
+          <rect x="250" y="440"
+            width="60" height="4"
+            rx="2" fill="#b5c7c7"/>
+
+        </g>
+
+        <g class="float-card" filter="url(#shadow)">
+
+          <rect x="25" y="126"
+            width="145" height="76"
+            rx="15"
+            fill="#1b3538"
+            stroke="#467b71"/>
+
+          <rect x="39" y="140"
+            width="45" height="45"
+            rx="11"
+            fill="url(#goldTile)"/>
+
+          <path d="M54 153h16v20H54zM58 158h8M58 164h8"
+            fill="none"
+            stroke="#183630"
+            stroke-width="1.8"/>
+
+          <text x="95" y="155"
+            font-size="11"
+            font-weight="bold"
+            fill="#ffffff">CREATE</text>
+
+          <text x="95" y="174"
+            font-size="9"
+            fill="#b5c7c7">Design</text>
+
+        </g>
+
+        <g class="float-card-delayed" filter="url(#shadow)">
+
+          <rect x="382" y="305"
+            width="155" height="76"
+            rx="15"
+            fill="#1b3538"
+            stroke="#467b71"/>
+
+          <rect x="396" y="319"
+            width="45" height="45"
+            rx="11"
+            fill="url(#emeraldTile)"/>
+
+          <path d="M408 342l7 7 14-15"
+            fill="none"
+            stroke="#e4f3ed"
+            stroke-width="2.5"
+            stroke-linecap="round"/>
+
+          <text x="453" y="334"
+            font-size="11"
+            font-weight="bold"
+            fill="#ffffff">BUILD</text>
+
+          <text x="453" y="353"
+            font-size="9"
+            fill="#b5c7c7">Innovate</text>
+
         </g>
 
         <g fill="#d7b98e">
-          <circle cx="250" cy="40" r="5"/>
-          <circle cx="460" cy="250" r="4"/>
-          <circle cx="100" cy="397" r="4"/>
+          <circle cx="280" cy="32" r="5"/>
+          <circle cx="508" cy="260" r="4"/>
+          <circle cx="104" cy="405" r="4"/>
         </g>
 
         <g fill="#8ed8c2">
-          <circle cx="76" cy="145" r="4"/>
-          <circle cx="408" cy="113" r="4"/>
-          <circle cx="355" cy="432" r="5"/>
-        </g>
-
-        <g class="art-float" filter="url(#artShadow)">
-
-          <path d="M250 85L416 370L330 370L250 228L170 370L84 370Z"
-            fill="url(#faceA)" stroke="#b8e1d3" stroke-width="1.4"/>
-
-          <path d="M250 85L278 68L444 353L416 370Z"
-            fill="url(#faceC)" stroke="#639b90" stroke-width="1.2"/>
-
-          <path d="M416 370L444 353L358 353L330 370Z"
-            fill="url(#faceB)" stroke="#639b90"/>
-
-          <path d="M250 228L278 211L198 353L170 370Z"
-            fill="url(#faceB)" stroke="#639b90"/>
-
-          <path d="M250 270L305 365H195Z"
-            fill="url(#goldFace)" stroke="#e8cc9e" stroke-width="1.3"/>
-
-          <path d="M250 109L109 353M269 112L404 345"
-            stroke="#d9f4e9" stroke-opacity=".4"
-            stroke-width="1.2" fill="none"/>
-
+          <circle cx="88" cy="90" r="4"/>
+          <circle cx="455" cy="107" r="5"/>
+          <circle cx="390" cy="468" r="4"/>
         </g>
 
       </svg>
-
-      <div class="art-label">
-        <strong>THE AECF,LLC</strong>
-        <small>Corporate website</small>
-      </div>
 
     </div>
 
@@ -1005,15 +1297,22 @@ footer {
 
 <div class="identity-strip">
   <div class="container identity-grid">
+
     <div class="identity-item">
-      <span aria-hidden="true">◇</span> Company Information
+      <span aria-hidden="true">◇</span>
+      Mobile Application Development
     </div>
+
     <div class="identity-item">
-      <span aria-hidden="true">◎</span> Privacy Resources
+      <span aria-hidden="true">◎</span>
+      User-Centered Design
     </div>
+
     <div class="identity-item">
-      <span aria-hidden="true">✦</span> Contact Information
+      <span aria-hidden="true">✦</span>
+      Responsible Innovation
     </div>
+
   </div>
 </div>
 
@@ -1023,71 +1322,360 @@ footer {
     <div class="about-art">
       <div class="monogram">
         <strong>AECF</strong>
-        <small>THE AECF,LLC</small>
+        <small>DESIGN · DEVELOP · INNOVATE</small>
       </div>
     </div>
 
     <div class="about-content">
-      <span class="eyebrow">About The Company</span>
 
-      <h2>Company profile.</h2>
+      <span class="eyebrow">About Our Company</span>
+
+      <h2>Creating meaningful digital experiences.</h2>
 
       <p>
-        This website is being prepared to provide
-        information about THE AECF,LLC.
+        THE AECF,LLC is a mobile application development
+        company with a broad focus on software, mobile
+        technology and digital experiences.
       </p>
 
       <p>
-        Verified company background, business activities
-        and relevant organizational details will be
-        published following final review.
+        Our development interests span a variety of
+        application categories, bringing together creativity,
+        practical functionality, intuitive interfaces and
+        responsible technology.
       </p>
+
+      <p>
+        We aim to create applications that are accessible,
+        engaging and useful to people in their everyday
+        digital lives.
+      </p>
+
+      <div class="about-points">
+
+        <div class="about-point">
+          <span class="check-icon">✓</span>
+          Diverse application development focus
+        </div>
+
+        <div class="about-point">
+          <span class="check-icon">✓</span>
+          Thoughtful design and user experience
+        </div>
+
+        <div class="about-point">
+          <span class="check-icon">✓</span>
+          Continuous improvement and responsible development
+        </div>
+
+      </div>
 
       <div class="actions">
         <a href="#contact" class="btn btn-emerald">
-          Contact Information →
+          Get in Touch →
         </a>
       </div>
+
     </div>
 
   </div>
 </section>
 
-<section class="cards-section" id="information">
+<section class="categories-section" id="information">
+
   <div class="container">
 
     <div class="section-heading">
-      <span class="eyebrow">Information Center</span>
 
-      <h2>Explore our website.</h2>
+      <span class="eyebrow">Our Development Focus</span>
+
+      <h2>Applications for a connected world.</h2>
 
       <p>
-        A central place for company information,
-        privacy documentation and communication details.
+        Exploring diverse digital product categories
+        to address different interests, everyday needs
+        and opportunities for innovation.
       </p>
+
     </div>
 
     <div class="card-grid">
 
       <article class="feature-card">
+
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="4" y="3" width="16" height="18" rx="2"/>
-            <path d="M8 7h8M8 11h8M8 15h5"/>
+            <rect x="6" y="2" width="12" height="20" rx="3"/>
+            <path d="M10 5h4M11 19h2"/>
           </svg>
         </div>
 
-        <h3>Company Profile</h3>
+        <h3>Mobile Applications</h3>
 
         <p>
-          Company background and organizational
-          information will be available here once confirmed.
+          Mobile software experiences focused on
+          intuitive navigation, practical functionality
+          and everyday digital needs.
         </p>
 
-        <a class="card-link" href="#about">About the company →</a>
       </article>
 
       <article class="feature-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 6h10a4 4 0 0 1 4 4l1 6a3 3 0 0 1-5 3l-3-3h-4l-3 3a3 3 0 0 1-5-3l1-6a4 4 0 0 1 4-4z"/>
+            <path d="M8 9v6M5 12h6"/>
+            <circle cx="16" cy="11" r="1"/>
+            <circle cx="19" cy="14" r="1"/>
+          </svg>
+        </div>
+
+        <h3>Games &amp; Entertainment</h3>
+
+        <p>
+          Interactive gaming concepts, engaging
+          entertainment experiences and creative
+          digital content applications.
+        </p>
+
+      </article>
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 9l10-5 10 5-10 5z"/>
+            <path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"/>
+          </svg>
+        </div>
+
+        <h3>Education &amp; Learning</h3>
+
+        <p>
+          Educational application concepts, interactive
+          learning tools and accessible resources
+          supporting knowledge discovery.
+        </p>
+
+      </article>
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="7" width="18" height="14" rx="2"/>
+            <path d="M8 7V4h8v3M3 12h18M10 12v3h4v-3"/>
+          </svg>
+        </div>
+
+        <h3>Business &amp; Productivity</h3>
+
+        <p>
+          Application concepts designed around
+          organization, efficiency, workflow management
+          and productive digital experiences.
+        </p>
+
+      </article>
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h10v8a5 5 0 0 1-10 0z"/>
+            <path d="M7 5H3v3a4 4 0 0 0 4 4M17 5h4v3a4 4 0 0 1-4 4M12 16v5M8 21h8"/>
+          </svg>
+        </div>
+
+        <h3>Sports &amp; Lifestyle</h3>
+
+        <p>
+          Sports information, lifestyle tools,
+          personal interests and applications
+          supporting everyday activities.
+        </p>
+
+      </article>
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="2"/>
+            <rect x="14" y="3" width="7" height="7" rx="2"/>
+            <rect x="3" y="14" width="7" height="7" rx="2"/>
+            <rect x="14" y="14" width="7" height="7" rx="2"/>
+          </svg>
+        </div>
+
+        <h3>Tools &amp; Utilities</h3>
+
+        <p>
+          Practical software concepts, convenient
+          mobile utilities and tools that simplify
+          everyday digital tasks.
+        </p>
+
+      </article>
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="16" rx="3"/>
+            <path d="M10 8l6 4-6 4z"/>
+          </svg>
+        </div>
+
+        <h3>Media &amp; Multimedia</h3>
+
+        <p>
+          Media discovery, multimedia experiences,
+          digital content organization and creative
+          software application concepts.
+        </p>
+
+      </article>
+
+      <article class="feature-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="6" y="6" width="12" height="12" rx="2"/>
+            <rect x="9" y="9" width="6" height="6" rx="1"/>
+            <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>
+          </svg>
+        </div>
+
+        <h3>Digital Innovation</h3>
+
+        <p>
+          Exploring emerging technologies, new
+          software possibilities and innovative
+          approaches to digital product development.
+        </p>
+
+      </article>
+
+    </div>
+
+    <p class="category-note">
+      These categories describe our broad development
+      focus. Individual product availability, functionality
+      and release information may vary.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="dark-section" id="development">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">Our Development Approach</span>
+
+      <h2>From ideas to digital experiences.</h2>
+
+      <p>
+        Our approach emphasizes thoughtful planning,
+        practical design, reliable functionality
+        and ongoing improvement.
+      </p>
+
+    </div>
+
+    <div class="process-grid">
+
+      <article class="process-card">
+        <div class="process-number">01</div>
+        <h3>Discover</h3>
+        <p>
+          Understand user needs, explore ideas and
+          identify meaningful opportunities for
+          application development.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">02</div>
+        <h3>Design</h3>
+        <p>
+          Shape accessible interfaces, thoughtful
+          interactions and visually consistent
+          digital experiences.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">03</div>
+        <h3>Develop</h3>
+        <p>
+          Translate concepts into functional software
+          with attention to performance, reliability
+          and appropriate security.
+        </p>
+      </article>
+
+      <article class="process-card">
+        <div class="process-number">04</div>
+        <h3>Improve</h3>
+        <p>
+          Evaluate functionality, consider feedback
+          and pursue continuous improvement
+          throughout development.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="values">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">Our Principles</span>
+
+      <h2>People at the heart of technology.</h2>
+
+      <p>
+        We believe digital products should balance
+        creativity, usability and responsible development.
+      </p>
+
+    </div>
+
+    <div class="values-grid">
+
+      <article class="value-card">
+
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22S3 17 3 9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 8-9 13-9 13z"/>
+          </svg>
+        </div>
+
+        <h3>User Experience</h3>
+
+        <p>
+          We aim to prioritize clear navigation,
+          accessible interfaces and meaningful
+          interactions throughout our application
+          development process.
+        </p>
+
+      </article>
+
+      <article class="value-card">
+
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 2l8 4v6c0 5-4 8-8 10-4-2-8-5-8-10V6z"/>
@@ -1095,115 +1683,164 @@ footer {
           </svg>
         </div>
 
-        <h3>Privacy Information</h3>
+        <h3>Privacy &amp; Security</h3>
 
         <p>
-          Website privacy documentation and information
-          about relevant data handling practices.
+          We recognize the importance of transparent
+          information handling, appropriate safeguards
+          and respecting user privacy.
         </p>
 
-        <a class="card-link" href="privacy-policy.html">
-          Privacy policy →
-        </a>
       </article>
 
-      <article class="feature-card">
+      <article class="value-card">
+
         <div class="feature-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="3"/>
-            <path d="M3 7l9 6 9-6"/>
+            <path d="M13 2L4 14h7l-1 8 10-12h-7z"/>
           </svg>
         </div>
 
-        <h3>Communication</h3>
+        <h3>Continuous Innovation</h3>
 
         <p>
-          Company contact channels will be published
-          once the business email configuration is complete.
+          We explore new ideas, technologies and
+          approaches to create useful digital experiences
+          and improve application quality over time.
         </p>
 
-        <a class="card-link" href="#contact">Contact information →</a>
       </article>
 
     </div>
 
   </div>
+
 </section>
 
-<section id="privacy">
+<section class="privacy-section" id="privacy">
+
   <div class="container">
 
     <div class="privacy-panel">
+
       <div>
+
         <span class="eyebrow">Privacy &amp; Transparency</span>
 
-        <h2>Information and privacy.</h2>
+        <h2>Responsible digital development.</h2>
 
         <p>
-          Our website privacy policy explains the
-          information handling practices associated with
-          this website. Product-specific policies will be
-          provided separately where applicable.
+          Our website privacy documentation provides
+          information about website data handling.
+          Individual applications have their own
+          applicable privacy disclosures based on
+          their functionality and information practices.
         </p>
+
       </div>
 
-      <a class="btn btn-emerald" href="privacy-policy.html">
+      <a class="btn btn-emerald"
+        href="privacy-policy.html">
         View Privacy Policy →
       </a>
+
     </div>
 
   </div>
+
 </section>
 
 <section class="dark-section" id="contact">
+
   <div class="container contact-grid">
 
     <div class="contact-content">
-      <span class="eyebrow">Contact Information</span>
 
-      <h2>Get in touch.</h2>
+      <span class="eyebrow">Contact &amp; Support</span>
+
+      <h2>Let's connect.</h2>
 
       <p>
-        Business communication details for THE AECF,LLC
-        will be published here after they have been
-        configured and verified.
+        Contact THE AECF,LLC for company enquiries,
+        application-related questions, feedback,
+        privacy enquiries and customer support.
       </p>
+
+      <div class="actions">
+
+        <a class="btn btn-gold"
+          href="mailto:contact@theaecfllc.online">
+          Send Us an Email →
+        </a>
+
+      </div>
+
     </div>
 
     <div class="contact-card">
 
       <div class="contact-row">
+
         <div class="contact-symbol" aria-hidden="true">◇</div>
+
         <div>
-          <strong>Organization Name</strong>
+          <strong>Organization</strong>
           <p>THE AECF,LLC</p>
         </div>
+
       </div>
 
       <div class="contact-row">
+
         <div class="contact-symbol" aria-hidden="true">◎</div>
+
         <div>
-          <strong>Website Domain</strong>
-          <p>theaecfllc.online</p>
+          <strong>Industry</strong>
+          <p>Software &amp; Mobile Application Development</p>
         </div>
+
       </div>
 
       <div class="contact-row">
+
         <div class="contact-symbol" aria-hidden="true">✉</div>
+
         <div>
           <strong>Business Email</strong>
-          <p>Pending configuration and verification.</p>
+          <p>
+            <a href="mailto:contact@theaecfllc.online">
+              contact@theaecfllc.online
+            </a>
+          </p>
         </div>
+
+      </div>
+
+      <div class="contact-row">
+
+        <div class="contact-symbol" aria-hidden="true">↗</div>
+
+        <div>
+          <strong>Official Website</strong>
+          <p>
+            <a href="https://theaecfllc.online/">
+              theaecfllc.online
+            </a>
+          </p>
+        </div>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 </main>
 
 <footer>
+
   <div class="container">
 
     <div class="footer-grid">
@@ -1211,54 +1848,81 @@ footer {
       <div class="footer-company">
 
         <a class="brand" href="#top">
+
           <div class="brand-mark">
+
             <svg viewBox="0 0 40 40" aria-hidden="true">
               <path d="M20 3L38 36H29L20 18L11 36H2Z"
                 fill="currentColor"/>
-              <path d="M14 29H26L20 23Z" fill="currentColor"/>
+              <path d="M14 29H26L20 23Z"
+                fill="currentColor"/>
             </svg>
+
           </div>
 
           <div>
             <div class="brand-name">THE AECF,LLC</div>
-            <div class="brand-subtitle">Corporate Information</div>
+            <div class="brand-subtitle">Digital Innovation</div>
           </div>
+
         </a>
 
         <p class="footer-description">
-          Company information, privacy resources
-          and contact information.
+          Mobile application development, thoughtful
+          software experiences and responsible innovation
+          across diverse digital product categories.
         </p>
 
       </div>
 
       <div class="footer-column">
+
         <h3>Company</h3>
+
         <a href="#top">Home</a>
         <a href="#about">About Us</a>
-        <a href="#information">Information Center</a>
+        <a href="#information">Applications</a>
+        <a href="#development">Development</a>
+        <a href="#values">Our Principles</a>
+
       </div>
 
       <div class="footer-column">
-        <h3>Legal &amp; Contact</h3>
+
+        <h3>Legal &amp; Support</h3>
+
         <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="#contact">Contact Information</a>
+        <a href="#contact">Contact Us</a>
+
+        <a href="mailto:contact@theaecfllc.online">
+          Customer Support
+        </a>
+
+        <a href="mailto:contact@theaecfllc.online">
+          contact@theaecfllc.online
+        </a>
+
       </div>
 
     </div>
 
     <div class="footer-bottom">
+
       <span>
-        &copy; <span id="year">2026</span> THE AECF,LLC.
+        &copy; <span id="year">2026</span>
+        THE AECF,LLC. All rights reserved.
       </span>
 
       <a href="#top">Back to top ↑</a>
+
     </div>
 
   </div>
+
 </footer>
 
 <script>
+
 const menuButton = document.getElementById("menuButton");
 const navigation = document.getElementById("navigation");
 
@@ -1268,28 +1932,38 @@ function closeMenu() {
 }
 
 menuButton.addEventListener("click", function () {
+
   const open = navigation.classList.toggle("open");
+
   menuButton.setAttribute("aria-expanded", String(open));
+
 });
 
 navigation.querySelectorAll("a").forEach(function (link) {
+
   link.addEventListener("click", closeMenu);
+
 });
 
 document.addEventListener("keydown", function (event) {
+
   if (event.key === "Escape") {
     closeMenu();
   }
+
 });
 
 window.addEventListener("resize", function () {
+
   if (window.innerWidth > 760) {
     closeMenu();
   }
+
 });
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
+
 </script>
 
 </body>
