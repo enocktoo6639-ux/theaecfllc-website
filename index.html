@@ -1,0 +1,1296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101f24">
+<meta name="description" content="THE AECF,LLC — Company information, privacy and contact information.">
+<meta name="robots" content="noindex">
+<title>THE AECF,LLC | Corporate Website</title>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101f24'/%3E%3Cpath d='M32 10L54 52H43L32 29L21 52H10Z' fill='%23D7B98E'/%3E%3C/svg%3E">
+
+<style>
+:root {
+  --forest: #101f24;
+  --dark: #0a1519;
+  --emerald: #127c70;
+  --mint: #8ed8c2;
+  --gold: #d7b98e;
+  --ivory: #f7f6f2;
+  --white: #ffffff;
+  --ink: #172b30;
+  --muted: #607477;
+  --light-muted: #b5c7c7;
+  --border: rgba(17,55,56,.13);
+  --dark-border: rgba(255,255,255,.13);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--emerald);
+  outline-offset: 5px;
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 15px;
+  padding: 12px 22px;
+  background: var(--gold);
+  color: var(--dark);
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(16,31,36,.97);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--dark-border);
+  color: var(--white);
+}
+
+.navbar {
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 49px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg,#f0d5aa,#b69a70);
+  border-radius: 13px;
+  flex-shrink: 0;
+}
+
+.brand-mark svg {
+  width: 31px;
+  height: 31px;
+  color: var(--forest);
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+  line-height: 1.25;
+}
+
+.brand-subtitle {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.3px;
+  color: var(--light-muted);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navigation a {
+  color: var(--light-muted);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .2s;
+}
+
+.navigation a:hover {
+  color: var(--gold);
+}
+
+.navigation .contact-link {
+  padding: 12px 24px;
+  border: 1px solid rgba(215,185,142,.6);
+  color: var(--gold);
+  border-radius: 10px;
+}
+
+.menu-button {
+  display: none;
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--dark-border);
+  border-radius: 10px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 80% 40%,rgba(18,124,112,.30),transparent 55%),
+    linear-gradient(125deg,#101f24,#0a171b);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(142,216,194,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(142,216,194,.04) 1px,transparent 1px);
+  background-size: 65px 65px;
+  mask-image: linear-gradient(to bottom,black,transparent);
+}
+
+.hero-grid {
+  min-height: 650px;
+  padding: 90px 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: var(--emerald);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+}
+
+.hero .eyebrow,
+.dark-section .eyebrow {
+  color: var(--gold);
+}
+
+.hero h1 {
+  margin: 22px 0 28px;
+  font-size: clamp(45px,6vw,83px);
+  font-weight: 720;
+  letter-spacing: -3px;
+  line-height: 1.08;
+}
+
+.hero h1 span {
+  display: block;
+  background: linear-gradient(100deg,#b9e7d9,#70c7b0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  max-width: 540px;
+  color: var(--light-muted);
+  font-size: 18px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 11px;
+  padding: 15px 26px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform .25s,background .25s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg,#f0d7af,#c5a375);
+  color: var(--dark);
+}
+
+.btn-outline {
+  border: 1px solid var(--dark-border);
+  background: rgba(255,255,255,.04);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(142,216,194,.1);
+}
+
+.btn-emerald {
+  background: var(--emerald);
+  color: white;
+}
+
+.hero-art {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+}
+
+.hero-art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.art-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+.orbit {
+  transform-origin: 250px 250px;
+  animation: orbit 65s linear infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-13px); }
+}
+
+@keyframes orbit {
+  to { transform: rotate(360deg); }
+}
+
+.art-label {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  padding: 18px 23px;
+  background: rgba(16,31,36,.92);
+  border: 1px solid var(--dark-border);
+  border-radius: 14px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.2);
+}
+
+.art-label strong {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.art-label small {
+  color: var(--light-muted);
+  font-size: 11px;
+}
+
+.identity-strip {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 28px 0;
+}
+
+.identity-item {
+  padding: 5px 15px;
+  text-align: center;
+  font-weight: 650;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.identity-item:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+.identity-item span {
+  color: var(--emerald);
+  margin-right: 9px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.hero {
+  padding: 0;
+}
+
+.section-heading {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto 48px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-content h2 {
+  font-size: clamp(32px,4vw,49px);
+  line-height: 1.2;
+  letter-spacing: -1.6px;
+  margin: 17px 0;
+}
+
+.section-heading p,
+.about-content p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.about-art {
+  min-height: 365px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(18,124,112,.35),transparent 65%),
+    var(--forest);
+}
+
+.about-art::before,
+.about-art::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 275px;
+  height: 275px;
+  border: 1px solid rgba(142,216,194,.25);
+  border-radius: 40px;
+  transform: rotate(45deg);
+}
+
+.about-art::after {
+  width: 220px;
+  height: 220px;
+}
+
+.monogram {
+  text-align: center;
+  color: var(--gold);
+}
+
+.monogram strong {
+  display: block;
+  font-size: clamp(55px,8vw,100px);
+  letter-spacing: -5px;
+  line-height: 1.1;
+}
+
+.monogram small {
+  display: block;
+  margin-top: 18px;
+  letter-spacing: 3px;
+  color: var(--light-muted);
+  font-size: 11px;
+}
+
+.about-content p + p {
+  margin-top: 18px;
+}
+
+.cards-section {
+  background: #eeefea;
+  border-block: 1px solid var(--border);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 23px;
+}
+
+.feature-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(16,31,36,.035);
+  transition: transform .25s,box-shadow .25s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(16,31,36,.08);
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  border-radius: 15px;
+  color: var(--emerald);
+  background: #e5f2ed;
+}
+
+.feature-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature-card h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card-link {
+  display: inline-flex;
+  margin-top: 22px;
+  color: var(--emerald);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.privacy-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 40px;
+  padding: 45px;
+  border-radius: 28px;
+  background: #e5f0eb;
+  border: 1px solid rgba(18,124,112,.15);
+}
+
+.privacy-panel h2 {
+  font-size: clamp(30px,4vw,42px);
+  margin: 12px 0;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.privacy-panel p {
+  color: var(--muted);
+  max-width: 650px;
+  font-size: 15px;
+}
+
+.dark-section {
+  background:
+    radial-gradient(ellipse at 80% 0%,rgba(18,124,112,.2),transparent 70%),
+    var(--forest);
+  color: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.contact-content p {
+  color: var(--light-muted);
+  font-size: 16px;
+}
+
+.contact-card {
+  padding: 30px;
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.035);
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 19px 0;
+}
+
+.contact-row:first-child {
+  padding-top: 0;
+}
+
+.contact-row:last-child {
+  padding-bottom: 0;
+}
+
+.contact-row:not(:last-child) {
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.contact-symbol {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 11px;
+  background: rgba(215,185,142,.09);
+  color: var(--gold);
+  font-size: 19px;
+}
+
+.contact-row strong {
+  font-size: 14px;
+}
+
+.contact-row p {
+  color: var(--light-muted);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: 55px 0 25px;
+  border-top: 1px solid var(--dark-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 45px;
+  padding-bottom: 40px;
+}
+
+.footer-description {
+  max-width: 340px;
+  color: var(--light-muted);
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.footer-column h3 {
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+
+.footer-column a {
+  display: block;
+  font-size: 13px;
+  color: var(--light-muted);
+  margin: 11px 0;
+}
+
+.footer-column a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid var(--dark-border);
+  padding-top: 24px;
+  color: var(--light-muted);
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: var(--gold);
+}
+
+.preview-notice {
+  padding: 12px 5%;
+  background: #f1e9d9;
+  color: #54452e;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media(max-width: 950px) {
+  .navigation {
+    gap: 18px;
+  }
+
+  .about-grid,
+  .contact-grid {
+    gap: 35px;
+  }
+
+  .feature-card {
+    padding: 25px;
+  }
+}
+
+@media(max-width: 760px) {
+  .navbar {
+    min-height: 76px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .menu-button {
+    display: grid;
+    place-items: center;
+  }
+
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 25px 5%;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--forest);
+    border-bottom: 1px solid var(--dark-border);
+    gap: 21px;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .navigation .contact-link {
+    text-align: center;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 65px 0;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-art {
+    max-width: 380px;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+
+  .about-grid,
+  .card-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-art {
+    min-height: 280px;
+  }
+
+  .identity-item {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  .identity-item span {
+    display: block;
+    margin: 0 0 5px;
+  }
+
+  .privacy-panel {
+    padding: 28px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .privacy-panel .btn {
+    justify-self: start;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-company {
+    grid-column: 1/-1;
+  }
+}
+
+@media(max-width: 380px) {
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .actions .btn {
+    width: 100%;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body id="top">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="container navbar">
+
+    <a class="brand" href="#top" aria-label="THE AECF,LLC homepage">
+      <div class="brand-mark">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 3L38 36H29L20 18L11 36H2Z"
+            fill="currentColor"/>
+          <path d="M14 29H26L20 23Z" fill="currentColor"/>
+        </svg>
+      </div>
+
+      <div>
+        <div class="brand-name">THE AECF,LLC</div>
+        <div class="brand-subtitle">Corporate Information</div>
+      </div>
+    </a>
+
+    <button class="menu-button" id="menuButton"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="navigation">
+
+      <svg width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2"
+        aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18"/>
+      </svg>
+
+    </button>
+
+    <nav class="navigation" id="navigation"
+      aria-label="Main navigation">
+
+      <a href="#top">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#information">Information</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="#contact" class="contact-link">Contact Us</a>
+
+    </nav>
+
+  </div>
+</header>
+
+<div class="preview-notice">
+  Website preview — company information and contact details
+  are being prepared for final review.
+</div>
+
+<main id="main">
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <span class="eyebrow">Corporate Information</span>
+
+      <h1>
+        THE AECF,
+        <span>LLC.</span>
+      </h1>
+
+      <p class="hero-description">
+        Welcome to the corporate information website for
+        THE AECF,LLC. Explore company information,
+        privacy resources and contact details as they
+        become available.
+      </p>
+
+      <div class="actions">
+        <a href="#about" class="btn btn-gold">
+          About Our Company <span aria-hidden="true">→</span>
+        </a>
+
+        <a href="#information" class="btn btn-outline">
+          Explore Information
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-art">
+
+      <svg viewBox="0 0 500 500" role="img"
+        aria-label="Decorative emerald and gold geometric sculpture">
+
+        <defs>
+          <radialGradient id="artGlow">
+            <stop offset="0%" stop-color="#50bb9e" stop-opacity=".25"/>
+            <stop offset="100%" stop-color="#50bb9e" stop-opacity="0"/>
+          </radialGradient>
+
+          <linearGradient id="faceA" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#b8e1d3"/>
+            <stop offset="100%" stop-color="#438e80"/>
+          </linearGradient>
+
+          <linearGradient id="faceB" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#438e80"/>
+            <stop offset="100%" stop-color="#143d3a"/>
+          </linearGradient>
+
+          <linearGradient id="faceC" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#34796c"/>
+            <stop offset="100%" stop-color="#10282b"/>
+          </linearGradient>
+
+          <linearGradient id="goldFace">
+            <stop stop-color="#f0d5aa"/>
+            <stop offset="100%" stop-color="#b18f5d"/>
+          </linearGradient>
+
+          <filter id="artShadow" x="-50%" y="-50%"
+            width="200%" height="200%">
+            <feDropShadow dx="0" dy="20" stdDeviation="18"
+              flood-color="#000" flood-opacity=".3"/>
+          </filter>
+        </defs>
+
+        <circle cx="250" cy="250" r="240" fill="url(#artGlow)"/>
+
+        <g fill="none" stroke="#8ed8c2">
+          <circle cx="250" cy="250" r="210" opacity=".15"/>
+          <circle cx="250" cy="250" r="180" opacity=".18"/>
+          <circle cx="250" cy="250" r="145" opacity=".2"/>
+          <circle class="orbit" cx="250" cy="250" r="195"
+            stroke-dasharray="3 13" opacity=".4"/>
+          <ellipse cx="250" cy="250" rx="218" ry="85"
+            transform="rotate(-35 250 250)" opacity=".2"/>
+        </g>
+
+        <g fill="#d7b98e">
+          <circle cx="250" cy="40" r="5"/>
+          <circle cx="460" cy="250" r="4"/>
+          <circle cx="100" cy="397" r="4"/>
+        </g>
+
+        <g fill="#8ed8c2">
+          <circle cx="76" cy="145" r="4"/>
+          <circle cx="408" cy="113" r="4"/>
+          <circle cx="355" cy="432" r="5"/>
+        </g>
+
+        <g class="art-float" filter="url(#artShadow)">
+
+          <path d="M250 85L416 370L330 370L250 228L170 370L84 370Z"
+            fill="url(#faceA)" stroke="#b8e1d3" stroke-width="1.4"/>
+
+          <path d="M250 85L278 68L444 353L416 370Z"
+            fill="url(#faceC)" stroke="#639b90" stroke-width="1.2"/>
+
+          <path d="M416 370L444 353L358 353L330 370Z"
+            fill="url(#faceB)" stroke="#639b90"/>
+
+          <path d="M250 228L278 211L198 353L170 370Z"
+            fill="url(#faceB)" stroke="#639b90"/>
+
+          <path d="M250 270L305 365H195Z"
+            fill="url(#goldFace)" stroke="#e8cc9e" stroke-width="1.3"/>
+
+          <path d="M250 109L109 353M269 112L404 345"
+            stroke="#d9f4e9" stroke-opacity=".4"
+            stroke-width="1.2" fill="none"/>
+
+        </g>
+
+      </svg>
+
+      <div class="art-label">
+        <strong>THE AECF,LLC</strong>
+        <small>Corporate website</small>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="identity-strip">
+  <div class="container identity-grid">
+    <div class="identity-item">
+      <span aria-hidden="true">◇</span> Company Information
+    </div>
+    <div class="identity-item">
+      <span aria-hidden="true">◎</span> Privacy Resources
+    </div>
+    <div class="identity-item">
+      <span aria-hidden="true">✦</span> Contact Information
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid">
+
+    <div class="about-art">
+      <div class="monogram">
+        <strong>AECF</strong>
+        <small>THE AECF,LLC</small>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <span class="eyebrow">About The Company</span>
+
+      <h2>Company profile.</h2>
+
+      <p>
+        This website is being prepared to provide
+        information about THE AECF,LLC.
+      </p>
+
+      <p>
+        Verified company background, business activities
+        and relevant organizational details will be
+        published following final review.
+      </p>
+
+      <div class="actions">
+        <a href="#contact" class="btn btn-emerald">
+          Contact Information →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cards-section" id="information">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">Information Center</span>
+
+      <h2>Explore our website.</h2>
+
+      <p>
+        A central place for company information,
+        privacy documentation and communication details.
+      </p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="3" width="16" height="18" rx="2"/>
+            <path d="M8 7h8M8 11h8M8 15h5"/>
+          </svg>
+        </div>
+
+        <h3>Company Profile</h3>
+
+        <p>
+          Company background and organizational
+          information will be available here once confirmed.
+        </p>
+
+        <a class="card-link" href="#about">About the company →</a>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2l8 4v6c0 5-4 8-8 10-4-2-8-5-8-10V6z"/>
+            <path d="M8 12l3 3 5-6"/>
+          </svg>
+        </div>
+
+        <h3>Privacy Information</h3>
+
+        <p>
+          Website privacy documentation and information
+          about relevant data handling practices.
+        </p>
+
+        <a class="card-link" href="privacy-policy.html">
+          Privacy policy →
+        </a>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="3"/>
+            <path d="M3 7l9 6 9-6"/>
+          </svg>
+        </div>
+
+        <h3>Communication</h3>
+
+        <p>
+          Company contact channels will be published
+          once the business email configuration is complete.
+        </p>
+
+        <a class="card-link" href="#contact">Contact information →</a>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="container">
+
+    <div class="privacy-panel">
+      <div>
+        <span class="eyebrow">Privacy &amp; Transparency</span>
+
+        <h2>Information and privacy.</h2>
+
+        <p>
+          Our website privacy policy explains the
+          information handling practices associated with
+          this website. Product-specific policies will be
+          provided separately where applicable.
+        </p>
+      </div>
+
+      <a class="btn btn-emerald" href="privacy-policy.html">
+        View Privacy Policy →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="dark-section" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-content">
+      <span class="eyebrow">Contact Information</span>
+
+      <h2>Get in touch.</h2>
+
+      <p>
+        Business communication details for THE AECF,LLC
+        will be published here after they have been
+        configured and verified.
+      </p>
+    </div>
+
+    <div class="contact-card">
+
+      <div class="contact-row">
+        <div class="contact-symbol" aria-hidden="true">◇</div>
+        <div>
+          <strong>Organization Name</strong>
+          <p>THE AECF,LLC</p>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-symbol" aria-hidden="true">◎</div>
+        <div>
+          <strong>Website Domain</strong>
+          <p>theaecfllc.online</p>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-symbol" aria-hidden="true">✉</div>
+        <div>
+          <strong>Business Email</strong>
+          <p>Pending configuration and verification.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-company">
+
+        <a class="brand" href="#top">
+          <div class="brand-mark">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M20 3L38 36H29L20 18L11 36H2Z"
+                fill="currentColor"/>
+              <path d="M14 29H26L20 23Z" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <div>
+            <div class="brand-name">THE AECF,LLC</div>
+            <div class="brand-subtitle">Corporate Information</div>
+          </div>
+        </a>
+
+        <p class="footer-description">
+          Company information, privacy resources
+          and contact information.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+        <h3>Company</h3>
+        <a href="#top">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#information">Information Center</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Legal &amp; Contact</h3>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#contact">Contact Information</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        &copy; <span id="year">2026</span> THE AECF,LLC.
+      </span>
+
+      <a href="#top">Back to top ↑</a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const menuButton = document.getElementById("menuButton");
+const navigation = document.getElementById("navigation");
+
+function closeMenu() {
+  navigation.classList.remove("open");
+  menuButton.setAttribute("aria-expanded", "false");
+}
+
+menuButton.addEventListener("click", function () {
+  const open = navigation.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(open));
+});
+
+navigation.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 760) {
+    closeMenu();
+  }
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
